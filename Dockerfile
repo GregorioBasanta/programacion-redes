@@ -1,17 +1,19 @@
-FROM rhub/ubuntu-gcc:latest
+FROM ubuntu:latest
 
 LABEL mantainer="Diego"
 
 # update and install dependencies
 RUN apt-get update \
     && apt-get install -y \
+    gcc build-essential \
     software-properties-common \
     wget \
     git \
     curl \
-    netcat \
+    netcat-traditional \
     strace \
     iproute2 \
+    iputils-ping \
     hping3 \
     gdb \
     net-tools \
